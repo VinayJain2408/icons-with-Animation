@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+#wrapper {
+    background-color: chartreuse;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#wrapper .box {
+    width: 500px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: aliceblue;
+    position: relative;
+}
+
+.icon i {
+    font-size: 50px;
+    background-color: black;
+    border-radius: 10px;
+    color: aliceblue;
+    border-radius: 8px;
+
+
+
+
+}
+.icon{
+    z-index: 1;
+}
+
+input {
+    height: 50px;
+    width: 50px;
+    opacity: 0;
+    z-index: 6;
+    display: inline-block;
+}
+
+.icon i:nth-of-type(1) {
+    position: absolute;
+    left: 40px;
+    top: 40px;
+     transition: left 0.2s ease-in-out ;
+     opacity: 0;
+     z-index: 1;
+}
+
+.icon i:nth-of-type(2) {
+    position: absolute;
+    right: 40px;
+    top: 40px;
+    opacity: 0;
+z-index: 2;
+    transition: right 0.5s ease-in-out;
+}
+
+.icon i:nth-of-type(3) {
+    position: absolute;
+    left: 40px;
+    opacity: 0;
+    bottom: 40px; transition: left 1.7s ease-in-out;
+z-index: 3;
+
+}
+
+.icon i:nth-of-type(4) {
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+    opacity: 0;
+    transition: right 2s ease-in-out;
+    z-index: 4;
+}
+
+.icon i:nth-of-type(5) {
+    position: absolute;
+    z-index:6;
+    right: 225PX;
+}
+
+ .icon:hover i:nth-of-type(4) {
+    bottom: 45%;
+    right: 225px;
+    opacity: 1;
+    animation: keyess  2.5s  ;
+
+} 
+
+ .icon:hover i:nth-of-type(3) {
+    bottom: 45%;
+    left: 225px;
+    opacity: 1;
+    animation: keyes  2s  ;
+
+
+}
+
+.icon:hover i:nth-of-type(2) {
+    top: 43%;
+    right: 225px;
+    opacity: 1;
+    
+    animation: keys  1.5s  ;
+}
+ .icon:hover i:nth-of-type(1) {
+    top: 43%;
+    left: 225px;
+    opacity: 1;
+    animation: key  1s   ;}  
+    
+@keyframes key{
+    
+    0%{  left: 225px; top: 43%;}
+    50%{ left: 40px; top: 40px;}
+    100%{  left: 225px; top: 43%;}
+}
+@keyframes keys{
+   
+    0%{ right: 225px; top: 43%;}
+      50%{right: 40px; top: 40px;}
+      100%{ right: 225px; top: 43%;}
+}
+@keyframes keyes{
+    
+    0%{ left: 225px;bottom:45%;}
+    50%{ left: 40px; bottom: 40px;}
+    100%{ left: 225px;bottom:45%;}
+}
+@keyframes keyess{
+   
+    0%{ right: 225px; bottom: 45%;}
+    50%{ right: 40px; bottom: 40px;}
+    100%{ right: 225px; bottom: 45%;}
+   
+}
+ 
+.icon input:checked + i:nth-of-type(1){
+    opacity: 1;
+    left: 225px;
+    top: 43%;
+    animation: key 2s ;
+}  
+.icon input:checked + i:nth-of-type(2){
+    opacity: 1;
+    right:225px;
+    top: 43%;
+    animation: keys 2s ;
+}  
+.icon input:checked + i:nth-of-type(3){
+    opacity: 1;
+    left: 225px;
+    bottom: 43%;
+    animation: keyes 2s ;
+}  
+.icon input:checked + i:nth-of-type(4){
+    opacity: 1;
+    right: 225px;
+    bottom: 43%;
+    animation: keyess 2s ;
+}  
